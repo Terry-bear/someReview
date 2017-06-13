@@ -1,20 +1,21 @@
-1. ½âÑ¹²¿ÊğMavenºËĞÄ³ÌĞò
+# mavenæ“ä½œæ‰‹å†Œ
+1. è§£å‹éƒ¨ç½²Mavenæ ¸å¿ƒç¨‹åº
 
-	¢Ù¼ì²éJAVA_HOME»·¾³±äÁ¿
-	
+	â‘ æ£€æŸ¥JAVA_HOMEç¯å¢ƒå˜é‡
+	   
 		C:\Windows\System32>echo %JAVA_HOME%
 		D:\DevInstall\jdk1.7.0_07
 	
-	¢Ú½âÑ¹MavenµÄºËĞÄ³ÌĞò
+	â‘¡è§£å‹Mavençš„æ ¸å¿ƒç¨‹åº
 	
-		½«apache-maven-3.2.2-bin.zip½âÑ¹µ½Ò»¸ö·ÇÖĞÎÄÎŞ¿Õ¸ñµÄÄ¿Â¼ÏÂ¡£ÀıÈç£ºD:\DevInstall\apache-maven-3.2.2
+		å°†apache-maven-3.2.2-bin.zipè§£å‹åˆ°ä¸€ä¸ªéä¸­æ–‡æ— ç©ºæ ¼çš„ç›®å½•ä¸‹ã€‚ä¾‹å¦‚ï¼šD:\DevInstall\apache-maven-3.2.2
 
-	¢ÛÅäÖÃ»·¾³±äÁ¿
+	â‘¢é…ç½®ç¯å¢ƒå˜é‡
 	
 		M2_HOME D:\DevInstall\apache-maven-3.2.2
 		path	D:\DevInstall\apache-maven-3.2.2\bin
 	
-	¢Ü²é¿´Maven°æ±¾ĞÅÏ¢ÑéÖ¤°²×°ÊÇ·ñÕıÈ·
+	â‘£æŸ¥çœ‹Mavenç‰ˆæœ¬ä¿¡æ¯éªŒè¯å®‰è£…æ˜¯å¦æ­£ç¡®
 	
 		C:\Windows\System32>mvn -v
 		Apache Maven 3.2.2 (45f7c06d68e745d05611f7fd14efb6594181933e; 2014-06-17T21:51:42+08:00)
@@ -23,20 +24,20 @@
 		Java home: D:\DevInstall\jdk1.7.0_07\jre
 		Default locale: zh_CN, platform encoding: GBK
 		OS name: "windows 7", version: "6.1", arch: "amd64", family: "windows"
-2. ĞŞ¸Ä±¾µØ²Ö¿â
+2. ä¿®æ”¹æœ¬åœ°ä»“åº“
 	
-	¢ÙÄ¬ÈÏ±¾µØ²Ö¿âÎ»ÖÃ£º
+	â‘ é»˜è®¤æœ¬åœ°ä»“åº“ä½ç½®ï¼š
 	~\.m2\repository
-		~±íÊ¾µ±Ç°ÓÃ»§µÄ¼ÒÄ¿Â¼£¬ÀıÈç£ºC:\Users\[Äãµ±Ç°µÇÂ¼ÏµÍ³µÄÓÃ»§Ãû]
+		~è¡¨ç¤ºå½“å‰ç”¨æˆ·çš„å®¶ç›®å½•ï¼Œä¾‹å¦‚ï¼šC:\Users\[ä½ å½“å‰ç™»å½•ç³»ç»Ÿçš„ç”¨æˆ·å]
 	
-	¢ÚÖ¸¶¨±¾µØ²Ö¿âÎ»ÖÃµÄÅäÖÃĞÅÏ¢ÎÄ¼ş£º
+	â‘¡æŒ‡å®šæœ¬åœ°ä»“åº“ä½ç½®çš„é…ç½®ä¿¡æ¯æ–‡ä»¶ï¼š
 	apache-maven-3.2.2\conf\settings.xml
 	
-	¢ÛÔÚ¸ù±êÇ©settingsÏÂÌí¼ÓÈçÏÂÄÚÈİ£º
-	<localRepository>[±¾µØ²Ö¿âÂ·¾¶£¬Ò²¾ÍÊÇRepMaven.zipµÄ½âÑ¹Ä¿Â¼]</localRepository>
-3. µÚÒ»¸öMaven¹¤³Ì
-	
-	¢ÙÄ¿Â¼½á¹¹
+	â‘¢åœ¨æ ¹æ ‡ç­¾settingsä¸‹æ·»åŠ å¦‚ä¸‹å†…å®¹ï¼š
+	<localRepository>[æœ¬åœ°ä»“åº“è·¯å¾„ï¼Œä¹Ÿå°±æ˜¯RepMaven.zipçš„è§£å‹ç›®å½•]</localRepository>
+3. ç¬¬ä¸€ä¸ªMavenå·¥ç¨‹
+
+	â‘ ç›®å½•ç»“æ„
 	
 		Hello
 		|---src
@@ -49,13 +50,14 @@
 		|---pom.xml
 
 	
-	¢ÚPOMÎÄ¼şÄÚÈİ
+	â‘¡POMæ–‡ä»¶å†…å®¹
 	
+```
 <?xml version="1.0" ?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	
-	<groupId>com.atguigu.maven</groupId>
+	<groupId>com.terryzh.maven</groupId>
 	<artifactId>Hello</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
@@ -70,19 +72,23 @@
 		</dependency>
 	</dependencies>
 </project>
-	
-	¢Û±àĞ´Ö÷³ÌĞò´úÂë
-		ÔÚsrc/main/java/com/atguigu/mavenÄ¿Â¼ÏÂĞÂ½¨ÎÄ¼şHello.java£¬ÄÚÈİÈçÏÂ
-		package com.atguigu.maven;
+```
+	â‘¢ç¼–å†™ä¸»ç¨‹åºä»£ç 
+		åœ¨src/main/java/com/terryzh/mavenç›®å½•ä¸‹æ–°å»ºæ–‡ä»¶
+		Hello.javaï¼Œå†…å®¹å¦‚ä¸‹
+		
+		package com.terryzh.maven;
 		public class Hello {
 			public String sayHello(String name){
 				return "Hello "+name+"!";
 			}
 		}
 	
-	¢Ü±àĞ´²âÊÔ´úÂë
-		ÔÚ/src/test/java/com/atguigu/mavenÄ¿Â¼ÏÂĞÂ½¨²âÊÔÎÄ¼şHelloTest.java
-		package com.atguigu.maven;	
+	
+	â‘£ç¼–å†™æµ‹è¯•ä»£ç 
+		åœ¨/src/test/java/com/terryzh/mavenç›®å½•ä¸‹æ–°å»ºæµ‹è¯•æ–‡ä»¶HelloTest.java
+		
+		package com.terryzh.maven;	
 		import org.junit.Test;
 		import static junit.framework.Assert.*;
 		public class HelloTest {
@@ -94,23 +100,27 @@
 			}
 		}
 	
-	¢İÔËĞĞ¼¸¸ö»ù±¾µÄMavenÃüÁî
-		mvn compile	±àÒë
-		mvn clean	ÇåÀí
-		mvn test	²âÊÔ
-		mvn package	´ò°ü
-		¡ù×¢Òâ£ºÔËĞĞMavenÃüÁîÊ±Ò»¶¨Òª½øÈëpom.xmlÎÄ¼şËùÔÚµÄÄ¿Â¼£¡
-4. µÚ¶ş¸öMaven¹¤³Ì
+	â‘¤è¿è¡Œå‡ ä¸ªåŸºæœ¬çš„Mavenå‘½ä»¤
+		mvn compile	ç¼–è¯‘
+		mvn clean	æ¸…ç†
+		mvn test	æµ‹è¯•
+		mvn package	æ‰“åŒ…
+		â€»æ³¨æ„ï¼šè¿è¡ŒMavenå‘½ä»¤æ—¶ä¸€å®šè¦è¿›å…¥pom.xmlæ–‡ä»¶æ‰€åœ¨çš„ç›®å½•ï¼
+
+`
+4. ç¬¬äºŒä¸ªMavenå·¥ç¨‹
 	
-	¢Ù¹¤³ÌÃû£ºHelloFriend
+	â‘ å·¥ç¨‹åï¼šHelloFriend
 	
-	¢ÚÄ¿Â¼½á¹¹ÓëµÚÒ»¸öMaven¹¤³ÌÏàÍ¬
+	â‘¡ç›®å½•ç»“æ„ä¸ç¬¬ä¸€ä¸ªMavenå·¥ç¨‹ç›¸åŒ
 	
-	¢ÛPOMÎÄ¼ş
+	â‘¢POMæ–‡ä»¶
+	
+```
 <?xml version="1.0" ?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.atguigu.maven</groupId>
+	<groupId>com.terryzh.maven</groupId>
 	<artifactId>HelloFriend</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>HelloFriend</name>
@@ -124,7 +134,7 @@
 		</dependency>		
 		
 		<dependency>
-			<groupId>com.atguigu.maven</groupId>
+			<groupId>com.terryzh.maven</groupId>
 			<artifactId>Hello</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>compile</scope>
@@ -132,11 +142,12 @@
 		
 	</dependencies>
 </project>
+```	
 	
-	¢ÜÖ÷³ÌĞò£ºÔÚsrc/main/java/com/atguigu/mavenÄ¿Â¼ÏÂĞÂ½¨ÎÄ¼şHelloFriend.java
+	â‘£ä¸»ç¨‹åºï¼šåœ¨src/main/java/com/terryzh/mavenç›®å½•ä¸‹æ–°å»ºæ–‡ä»¶HelloFriend.java
 	
-		package com.atguigu.maven;	
-		import com.atguigu.maven.Hello;
+		package com.terryzh.maven;	
+		import com.terryzh.maven.Hello;
 		public class HelloFriend {
 			public String sayHelloToFriend(String name){
 				Hello hello = new Hello();
@@ -149,12 +160,12 @@
 			}
 		}
 	
-	¢İ²âÊÔ³ÌĞò£ºÔÚ/src/test/java/com/atguigu/mavenÄ¿Â¼ÏÂĞÂ½¨²âÊÔÎÄ¼şHelloFriendTest.java
+	â‘¤æµ‹è¯•ç¨‹åºï¼šåœ¨/src/test/java/com/terryzh/mavenç›®å½•ä¸‹æ–°å»ºæµ‹è¯•æ–‡ä»¶HelloFriendTest.java
 	
-		package com.atguigu.maven;	
+		package com.terryzh.maven;	
 		import static junit.framework.Assert.assertEquals;
 		import org.junit.Test;
-		import com.atguigu.maven.Hello;
+		import com.terryzh.maven.Hello;
 		
 		public class HelloFriendTest {
 			@Test
@@ -165,17 +176,18 @@
 			}
 		}
 	
-	¢ŞÔËĞĞMavenÃüÁî
-		mvn install	°²×°
-5. µÚÈı¸öMaven¹¤³Ì
+	â‘¥è¿è¡ŒMavenå‘½ä»¤
+		mvn install	å®‰è£…
+```		
+5. ç¬¬ä¸‰ä¸ªMavenå·¥ç¨‹
 	
-	¢ÙÉèÖÃÍ¨¹ıMaven´´½¨µÄ¹¤³ÌµÄJDK°æ±¾¡ª¡ªÒ»ÀÍÓÀÒİ
+	â‘ è®¾ç½®é€šè¿‡Mavenåˆ›å»ºçš„å·¥ç¨‹çš„JDKç‰ˆæœ¬â€”â€”ä¸€åŠ³æ°¸é€¸
 		
-		[1]´ò¿ªsettings.xmlÎÄ¼ş
+		[1]æ‰“å¼€settings.xmlæ–‡ä»¶
 		
-		[2]ÕÒµ½profiles±êÇ©
+		[2]æ‰¾åˆ°profilesæ ‡ç­¾
 		
-		[3]¼ÓÈëÈçÏÂÅäÖÃ
+		[3]åŠ å…¥å¦‚ä¸‹é…ç½®
 			<profile>
 				<id>jdk-1.7</id>
 				<activation>
@@ -189,13 +201,13 @@
 				</properties>
 			</profile>
 	
-	¢Ú¹¤³Ì×ø±ê
+	â‘¡å·¥ç¨‹åæ ‡
 	
-		groupId£ºcom.atguigu.maven
-		ArtifactId£ºMakeFriends
-		Package£ºcom.atguigu.maven
+		groupIdï¼šcom.terryzh.maven
+		ArtifactIdï¼šMakeFriends
+		Packageï¼šcom.terryzh.maven
 	
-	¢ÛÔÚsrc/main/javaÖĞĞÂ½¨Ààcom.atguigu.maven.MakeFriends
+	â‘¢åœ¨src/main/javaä¸­æ–°å»ºç±»com.terryzh.maven.MakeFriends
 	
 		public String makeFriends(String name){
 			HelloFriend friend = new HelloFriend();
@@ -205,10 +217,10 @@
 			return str;
 		}
 		
-	¢ÜÔÚsrc/test/javaÖĞĞÂ½¨Àà
-	com.atguigu.maven.MakeFriendsTest
+	â‘£åœ¨src/test/javaä¸­æ–°å»ºç±»
+	com.terryzh.maven.MakeFriendsTest
 	
-		package com.atguigu.maven;
+		package com.terryzh.maven;
 		import static junit.framework.Assert.assertEquals;
 		import org.junit.Test;
 		public class MakeFriendsTest {
@@ -220,7 +232,7 @@
 			}
 		}
 	
-	¢İÌí¼ÓÒÀÀµĞÅÏ¢
+	â‘¤æ·»åŠ ä¾èµ–ä¿¡æ¯
 	
 		<dependency>
 			<groupId>junit</groupId>
@@ -229,17 +241,18 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-	    	<groupId>com.atguigu.maven</groupId>
+	    	<groupId>com.terryzh.maven</groupId>
 	    	<artifactId>HelloFriend</artifactId>
 	    	<version>0.0.1-SNAPSHOT</version>
 	    	<type>jar</type>
 	    	<scope>compile</scope>
 		</dependency>
 	
-	¢ŞÔÚEclipse»·¾³ÏÂÖ´ĞĞMavenÃüÁî£ºÓÒ»÷pom.xmlÑ¡Ôñrun as ÖĞµÄÃüÁîÖ´ĞĞ¼´¿É
-6. ²âÊÔÒÀÀµµÄ·¶Î§¶Ô´«µİĞÔµÄÓ°Ïì
+	â‘¥åœ¨Eclipseç¯å¢ƒä¸‹æ‰§è¡ŒMavenå‘½ä»¤ï¼šå³å‡»pom.xmlé€‰æ‹©run as ä¸­çš„å‘½ä»¤æ‰§è¡Œå³å¯
+
+6. æµ‹è¯•ä¾èµ–çš„èŒƒå›´å¯¹ä¼ é€’æ€§çš„å½±å“
 	
-	¢ÙÔÚHelloÖĞÌí¼Ó¶Ôspring-coreµÄÒÀÀµ
+	â‘ åœ¨Helloä¸­æ·»åŠ å¯¹spring-coreçš„ä¾èµ–
 	
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -247,18 +260,18 @@
 			<version>4.0.0.RELEASE</version>
 			<scope>compile</scope>
 		</dependency>
-	¢ÚÔÚHelloFriendÖĞ²é¿´spring-coreÊÇ·ñ±»¼ÓÈëÁËÔËĞĞÊ±»·¾³
+	â‘¡åœ¨HelloFriendä¸­æŸ¥çœ‹spring-coreæ˜¯å¦è¢«åŠ å…¥äº†è¿è¡Œæ—¶ç¯å¢ƒ
 	
-	¢Û½«HelloÖĞ¶Ôspring-coreµÄÒÀÀµ·¶Î§ĞŞ¸ÄÎªtest£¬ÔÙµ½HelloFriendÖĞ¼ì²é
+	â‘¢å°†Helloä¸­å¯¹spring-coreçš„ä¾èµ–èŒƒå›´ä¿®æ”¹ä¸ºtestï¼Œå†åˆ°HelloFriendä¸­æ£€æŸ¥
 	
-	¢Ü½«HelloÖĞ¶Ôspring-coreµÄÒÀÀµ·¶Î§ĞŞ¸ÄÎªprovided£¬ÔÙµ½HelloFriendÖĞ¼ì²é
+	â‘£å°†Helloä¸­å¯¹spring-coreçš„ä¾èµ–èŒƒå›´ä¿®æ”¹ä¸ºprovidedï¼Œå†åˆ°HelloFriendä¸­æ£€æŸ¥
 	
-	¢İ½áÂÛ£º·Çcompile·¶Î§µÄÒÀÀµ²»ÄÜ´«µİ£¬±ØĞëÔÚÓĞĞèÒªµÄ¹¤³ÌÖĞµ¥¶À¼ÓÈë
-7. ²âÊÔÒÀÀµÔ­Ôò
+	â‘¤ç»“è®ºï¼šécompileèŒƒå›´çš„ä¾èµ–ä¸èƒ½ä¼ é€’ï¼Œå¿…é¡»åœ¨æœ‰éœ€è¦çš„å·¥ç¨‹ä¸­å•ç‹¬åŠ å…¥
+7. æµ‹è¯•ä¾èµ–åŸåˆ™
 	
-	¢ÙÂ·¾¶×î¶ÌÕßÓÅÏÈ
+	â‘ è·¯å¾„æœ€çŸ­è€…ä¼˜å…ˆ
 	
-		[1]ÔÚHelloÖĞÒÀÀµlog4j-1.2.17
+		[1]åœ¨Helloä¸­ä¾èµ–log4j-1.2.17
 		
 			<dependency>
 				<groupId>log4j</groupId>
@@ -266,7 +279,7 @@
 				<version>1.2.17</version>
 			</dependency>
 
-		[2]ÔÚHelloFriendÖĞÒÀÀµlog4j-1.2.14
+		[2]åœ¨HelloFriendä¸­ä¾èµ–log4j-1.2.14
 		
 			<dependency>
 				<groupId>log4j</groupId>
@@ -274,19 +287,20 @@
 				<version>1.2.14</version>
 			</dependency>
 		
-		[3]²é¿´MakeFriendsÖĞ×Ô¶¯ÒıÈëµÄlog4jÊÇÄÄ¸ö°æ±¾
+		[3]æŸ¥çœ‹MakeFriendsä¸­è‡ªåŠ¨å¼•å…¥çš„log4jæ˜¯å“ªä¸ªç‰ˆæœ¬
 		
-	¢ÚÂ·¾¶ÏàÍ¬Ê±ÏÈÉùÃ÷ÕßÓÅÏÈ
+	â‘¡è·¯å¾„ç›¸åŒæ—¶å…ˆå£°æ˜è€…ä¼˜å…ˆ
 	
-		[1]´´½¨OurFriends¹¤³Ì£¬ÒÀÀµlog4j-1.2.17
+		[1]åˆ›å»ºOurFriendså·¥ç¨‹ï¼Œä¾èµ–log4j-1.2.17
 		
-		[2]ÈÃMakeFriendsÒÀÀµOurFriends
+		[2]è®©MakeFriendsä¾èµ–OurFriends
 		
-		[3]²âÊÔMakeFriendsÖĞ£¬HelloFriendºÍOurFriendsÒÀÀµµÄÏÈºóË³ĞòºÍÒıÈëµÄlog4j°æ±¾Ö®¼äµÄ¹ØÏµ
-8. ´´½¨Web¹¤³Ì
+		[3]æµ‹è¯•MakeFriendsä¸­ï¼ŒHelloFriendå’ŒOurFriendsä¾èµ–çš„å…ˆåé¡ºåºå’Œå¼•å…¥çš„log4jç‰ˆæœ¬ä¹‹é—´çš„å…³ç³»
+		
+8. åˆ›å»ºWebå·¥ç¨‹
 
 
-	¢ÙServletAPIÒÀÀµ
+	â‘ ServletAPIä¾èµ–
 	
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -294,7 +308,7 @@
 			<version>2.5</version>
 			<scope>provided</scope>
 		</dependency>
-	¢ÚJSPAPIÒÀÀµ
+	â‘¡JSPAPIä¾èµ–
 	
 		<dependency>
 			<groupId>javax.servlet.jsp</groupId>
@@ -302,10 +316,11 @@
 			<version>2.1.3-b06</version>
 			<scope>provided</scope>
 		</dependency>
-9. Web¹¤³Ì×Ô¶¯²¿Êğ
+9. Webå·¥ç¨‹è‡ªåŠ¨éƒ¨ç½²
+
 
 ***	<build>
-		<finalName>AtguiguWeb</finalName>
+		<finalName>terryzhWeb</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.cargo</groupId>
@@ -319,7 +334,7 @@
 					<configuration>
 						<type>existing</type>
 						<home>D:\DevInstall\apache-tomcat-6.0.39</home>
-						<!-- Èç¹ûTomcat¶Ë¿ÚÎªÄ¬ÈÏÖµ8080Ôò²»±ØÉèÖÃ¸ÃÊôĞÔ -->
+						<!-- å¦‚æœTomcatç«¯å£ä¸ºé»˜è®¤å€¼8080åˆ™ä¸å¿…è®¾ç½®è¯¥å±æ€§ -->
 						<properties>
 							<cargo.servlet.port>8989</cargo.servlet.port>
 						</properties>
@@ -337,12 +352,12 @@
 			</plugin>
 		</plugins>
 	</build>
-10. ¼Ì³Ğ
+10. ç»§æ‰¿
 
 
-	¢Ù´´½¨Parent¹¤³Ì£¬´ò°ü·½Ê½Îªpom
+	â‘ åˆ›å»ºParentå·¥ç¨‹ï¼Œæ‰“åŒ…æ–¹å¼ä¸ºpom
 	
-	¢ÚÊÕ¼¯ËùÓĞ·Çcompile·¶Î§µÄÒÀÀµĞÅÏ¢£¬Ê¹ÓÃdependencyManagement±êÇ©Í³Ò»¹ÜÀí
+	â‘¡æ”¶é›†æ‰€æœ‰écompileèŒƒå›´çš„ä¾èµ–ä¿¡æ¯ï¼Œä½¿ç”¨dependencyManagementæ ‡ç­¾ç»Ÿä¸€ç®¡ç†
 	
 		<dependencyManagement>
 			<dependencies>
@@ -354,27 +369,32 @@
 				</dependency>
 			</dependencies>
 		</dependencyManagement>
-	¢ÛÔÚ¸÷¸ö×Ó¹¤³ÌÖĞÒıÓÃ¸¸¹¤³Ì
+	â‘¢åœ¨å„ä¸ªå­å·¥ç¨‹ä¸­å¼•ç”¨çˆ¶å·¥ç¨‹
 		<parent>
-			<groupId>com.atguigu.maven</groupId>
+			<groupId>com.terryzh.maven</groupId>
 			<artifactId>Parent</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			
-			<!-- ÒÔµ±Ç°ÎÄ¼şÎª»ù×¼²éÕÒ¸¸¹¤³ÌÖĞpom.xmlÎÄ¼şµÄÏà¶ÔÂ·¾¶ -->
+			<!-- ä»¥å½“å‰æ–‡ä»¶ä¸ºåŸºå‡†æŸ¥æ‰¾çˆ¶å·¥ç¨‹ä¸­pom.xmlæ–‡ä»¶çš„ç›¸å¯¹è·¯å¾„ -->
 			<relativePath>../Parent/pom.xml</relativePath>
 		</parent>
-	¢ÜÉ¾³ı×Ó¹¤³ÌÖĞµÄÖØ¸´ĞÅÏ¢
+	â‘£åˆ é™¤å­å·¥ç¨‹ä¸­çš„é‡å¤ä¿¡æ¯
 	
 		groupId
 		artifactid
-	¢İÔÚ×Ó¹¤³ÌÖĞÕÒµ½±»¸¸¹¤³Ì¹ÜÀíµÄÒÀÀµĞÅÏ¢£¬É¾³ı°æ±¾ºÅ²¿·Ö
+	â‘¤åœ¨å­å·¥ç¨‹ä¸­æ‰¾åˆ°è¢«çˆ¶å·¥ç¨‹ç®¡ç†çš„ä¾èµ–ä¿¡æ¯ï¼Œåˆ é™¤ç‰ˆæœ¬å·éƒ¨åˆ†
 	
-	¢ŞÔÚ¸¸¹¤³ÌÖĞÍ³Ò»ĞŞ¸ÄÒÑ¹ÜÀíµÄÒÀÀµĞÅÏ¢µÄ°æ±¾ºÅ£¬¿´ÊÇ·ñÄÜ¹»¿ØÖÆËùÓĞ×Ó¹¤³Ì
-11. ¾ÛºÏ
->	ÔÚ×ÜµÄ¾ÛºÏ¹¤³ÌÖĞ¼ÓÈëÈçÏÂĞÅÏ¢
+	â‘¥åœ¨çˆ¶å·¥ç¨‹ä¸­ç»Ÿä¸€ä¿®æ”¹å·²ç®¡ç†çš„ä¾èµ–ä¿¡æ¯çš„ç‰ˆæœ¬å·ï¼Œçœ‹æ˜¯å¦èƒ½å¤Ÿæ§åˆ¶æ‰€æœ‰å­å·¥ç¨‹
 	
-***	<modules>
+11. èšåˆ
+åœ¨æ€»çš„èšåˆå·¥ç¨‹ä¸­åŠ å…¥å¦‚ä¸‹ä¿¡æ¯
+	
+	<modules>
 		<module>../Hello</module>
 		<module>../HelloFriend</module>
 		<module>../MakeFriends</module>
 		</modules>
+
+
+
+
