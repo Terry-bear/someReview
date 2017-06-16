@@ -1,5 +1,5 @@
 # maven操作手册
-###1. 解压部署Maven核心程序
+### 1. 解压部署Maven核心程序
 
 ######  ①检查JAVA_HOME环境变量
 	   
@@ -8,17 +8,17 @@
 C:\Windows\System32>echo %JAVA_HOME%
 		D:\DevInstall\jdk1.7.0_07
 ```
-######②解压Maven的核心程序
+###### ②解压Maven的核心程序
 	
 > 将apache-maven-3.2.2-bin.zip解压到一个**非中文无空格**的目录下。例如：`D:\DevInstall\apache-maven-3.2.2`
 
-######③配置环境变量
+###### ③配置环境变量
 	
 ```
 M2_HOME D:\DevInstall\apache-maven-3.2.2
 path	D:\DevInstall\apache-maven-3.2.2\bin
 ```
-######④查看Maven版本信息验证安装是否正确
+###### ④查看Maven版本信息验证安装是否正确
 		
 ```
 C:\Windows\System32>mvn -v
@@ -32,20 +32,20 @@ C:\Windows\System32>mvn -v
 
 ```		
 ----
-###2. 修改本地仓库
+### 2. 修改本地仓库
 	
-######①默认本地仓库位置：
+###### ①默认本地仓库位置：
 > `~\.m2\repository`
 		~表示当前用户的家目录，例如：C:\Users\[你当前登录系统的用户名]
 	
-######②指定本地仓库位置的配置信息文件：
+###### ②指定本地仓库位置的配置信息文件：
 	apache-maven-3.2.2\conf\settings.xml
 	
-######③在根标签settings下添加如下内容：
+###### ③在根标签settings下添加如下内容：
 	<localRepository>[本地仓库路径，也就是RepMaven.zip的解压目录]</localRepository>
-###3. 第一个Maven工程
+### 3. 第一个Maven工程
 
-######①目录结构
+###### ①目录结构
 	
 		
 ```
@@ -61,7 +61,7 @@ C:\Windows\System32>mvn -v
 ```
 
 	
-######②POM文件内容
+###### ②POM文件内容
 	
 ```
 <?xml version="1.0" ?>
@@ -85,7 +85,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	</dependencies>
 </project>
 ```
-######③编写主程序代码在src/main/java/com/terryzh/maven目录下新建文件Hello.java，内容如下
+###### ③编写主程序代码在src/main/java/com/terryzh/maven目录下新建文件Hello.java，内容如下
 		
 
 ```	
@@ -98,7 +98,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 
 ```	
 	
-######④编写测试代码在/src/test/java/com/terryzh/maven目录下新建测试文件HelloTest.java
+###### ④编写测试代码在/src/test/java/com/terryzh/maven目录下新建测试文件HelloTest.java
 		
 ```
 		package com.terryzh.maven;	
@@ -114,7 +114,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		}
 ```
 	
-######⑤运行几个基本的Maven命令
+###### ⑤运行几个基本的Maven命令
 >		
 	mvn compile	编译
 	mvn clean	清理
@@ -123,13 +123,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	※注意：运行Maven命令时一定要进入pom.xml文件所在的目录！
 
 
-###4. 第二个Maven工程
+### 4. 第二个Maven工程
 	
-######①工程名：HelloFriend
+###### ①工程名：HelloFriend
 	
-######②目录结构与第一个Maven工程相同
+###### ②目录结构与第一个Maven工程相同
 	
-######③POM文件
+###### ③POM文件
 	
 ```
 <?xml version="1.0" ?>
@@ -160,7 +160,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 </project>
 ```	
 	
-######④主程序：在src/main/java/com/terryzh/maven目录下新建文件HelloFriend.java
+###### ④主程序：在src/main/java/com/terryzh/maven目录下新建文件HelloFriend.java
 	
 		package com.terryzh.maven;	
 		import com.terryzh.maven.Hello;
@@ -176,7 +176,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			}
 		}
 	
-######⑤测试程序：在/src/test/java/com/terryzh/maven目录下新建测试文件HelloFriendTest.java
+###### ⑤测试程序：在/src/test/java/com/terryzh/maven目录下新建测试文件HelloFriendTest.java
 	
 ```
 	package com.terryzh.maven;	
@@ -194,14 +194,14 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		}
 ```
 	
-######⑥运行Maven命令
+###### ⑥运行Maven命令
 >mvn install	安装
 
 
 ### 5.  第三个Maven工程
 
 	
-######①设置通过Maven创建的工程的JDK版本——一劳永逸
+###### ①设置通过Maven创建的工程的JDK版本——一劳永逸
 		
 >[1]打开settings.xml文件
 		
@@ -224,7 +224,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			</profile>
 
 ```	
-######②工程坐标
+###### ②工程坐标
 	
 	
 ```	
@@ -233,7 +233,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		Package：com.terryzh.maven
 ```
 	
-######③在src/main/java中新建类com.terryzh.maven.MakeFriends
+###### ③在src/main/java中新建类com.terryzh.maven.MakeFriends
 	
 ```
 		public String makeFriends(String name){
@@ -245,7 +245,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		}
 ```
 		
-######④在src/test/java中新建类
+###### ④在src/test/java中新建类
 	
 ```
 	com.terryzh.maven.MakeFriendsTest
@@ -262,7 +262,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		}
 
 ```	
-######⑤添加依赖信息
+###### ⑤添加依赖信息
 	
 ```
 		<dependency>
@@ -280,12 +280,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		</dependency>
 ```
 	
-######⑥在Eclipse环境下执行Maven命令：
+###### ⑥在Eclipse环境下执行Maven命令：
 >右击**pom.xml**选择**run as**中的命令执行即可
 
-###6. 测试依赖的范围对传递性的影响
+### 6. 测试依赖的范围对传递性的影响
 	
-######①在Hello中添加对spring-core的依赖
+###### ①在Hello中添加对spring-core的依赖
 	
 ```
 		<dependency>
@@ -295,17 +295,17 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<scope>compile</scope>
 		</dependency>
 ```
-######②在HelloFriend中查看spring-core是否被加入了运行时环境
+###### ②在HelloFriend中查看spring-core是否被加入了运行时环境
 	
-######③将Hello中对spring-core的依赖范围修改为test，再到HelloFriend中检查
+###### ③将Hello中对spring-core的依赖范围修改为test，再到HelloFriend中检查
 	
-######④将Hello中对spring-core的依赖范围修改为provided，再到HelloFriend中检查
+###### ④将Hello中对spring-core的依赖范围修改为provided，再到HelloFriend中检查
 	
-######⑤结论：非compile范围的依赖不能传递，必须在有需要的工程中单独加入
+###### ⑤结论：非compile范围的依赖不能传递，必须在有需要的工程中单独加入
 
-###7. 测试依赖原则
+### 7. 测试依赖原则
 	
-######①路径最短者优先
+###### ①路径最短者优先
 	
 >[1]在Hello中依赖log4j-1.2.17
 		
@@ -329,7 +329,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		
 >[3]查看MakeFriends中自动引入的log4j是哪个版本
 		
-######②路径相同时先声明者优先
+###### ②路径相同时先声明者优先
 	
 >[1]创建OurFriends工程，依赖log4j-1.2.17
 		
@@ -337,10 +337,10 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		
 >[3]测试MakeFriends中，HelloFriend和OurFriends依赖的先后顺序和引入的log4j版本之间的关系
 		
-###8. 创建Web工程
+### 8. 创建Web工程
 
 
-######①ServletAPI依赖
+###### ①ServletAPI依赖
 	
 ```
 		<dependency>
@@ -350,7 +350,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<scope>provided</scope>
 		</dependency>
 ```
-######②JSPAPI依赖
+###### ②JSPAPI依赖
 	
 ```
 		<dependency>
@@ -360,7 +360,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<scope>provided</scope>
 		</dependency>
 ```
-###9. Web工程自动部署
+### 9. Web工程自动部署
 
 
 ```
@@ -404,9 +404,9 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 ### 10. 继承
 
 
-######①创建Parent工程，打包方式为pom
+###### ①创建Parent工程，打包方式为pom
 	
-######②收集所有非compile范围的依赖信息，使用dependencyManagement标签统一管理
+###### ②收集所有非compile范围的依赖信息，使用dependencyManagement标签统一管理
 	
 		
 
@@ -423,7 +423,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		</dependencyManagement>
 
 ```
-######③在各个子工程中引用父工程
+###### ③在各个子工程中引用父工程
 
 ```		
     <parent>
@@ -436,16 +436,16 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		</parent>
 
 ```
-######④删除子工程中的重复信息
+###### ④删除子工程中的重复信息
 >	
 groupId
 artifactid
 	
 	
-######⑤在子工程中找到被父工程管理的依赖信息，删除版本号部分
+###### ⑤在子工程中找到被父工程管理的依赖信息，删除版本号部分
 	
-######⑥在父工程中统一修改已管理的依赖信息的版本号，看是否能够控制所有子工程
-	
+###### ⑥在父工程中统一修改已管理的依赖信息的版本号，看是否能够控制所有子工程
+	 
 	
 
 ### 11. 聚合
