@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件的冒泡示例</title>
+	<style type="text/css">
+		div{
+			margin: 10px;
+			border: 1px solid;
+			width: 500px;
+			text-align:center;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<a href="http://www.baidu.com" id="link1">baidu</a>
+		<p id="p1">确认</p>
+		<p id="p2">取消</p>
+	</div>
+	<div id="div2">
+		<p id="p3">取消</p>
+		<p id="p4">取消</p>
+	</div>
+
+	<script type="text/javascript">
+		
+
+	// var link1 = document.getElementById('link1')
+	// link1.addEventListener('click', function(e){
+	// 	e.preventDefault()	//取消默认行为
+	// 	console.log(123456)
+	// })
+	// 
+	// 对addEventListener进行封装
+	function bindEvent(elem, type, selector, fn){
+		if(fn == null){
+			fn = selector
+			selector = null
+		} 
+		elem.addEventListener(type, function (e){
+			var target
+			if(selector){
+				//代理
+				target = e.target
+				if(target.matches(selector)){
+					fn.call(this, e)
+				}
+			} else {
+				// 不是单利
+				fn(e)
+			}
+		})
+	}
+
+	var div1 = document.getElementById('div1')
+	bindEvent(div1, 'click', 'a', function (e){
+		e.preventDefault()
+		console.log(this.innerHTML)
+	})
+
+	var p1 = document.getElementById('p1')
+	bindEvent(p1, 'click', function (e){
+		e.preventDefault()
+		// p1.innerHTML = div1.innerHTML
+		console.log(p1.innerHTML)
+	})
+
+	// var link1 = document.getElementById('link1')
+	// bindEvent(link1, 'click', function (e){
+	// 	e.preventDefault()
+	// 	console.log('这是一个链接')
+	// })
+
+	// var p1 = document.getElementById('p1')
+	// bindEvent(p1, 'click', function(e){
+	// 	e.stopPropagation()
+	// 	console.log('这是个p标签')
+	// })
+
+	// var body = document.body
+	// bindEvent(body, 'click', function (e){
+	// 	alert('这是body的事件')
+	// })
+
+	// var div1 = document.getElementById('div1')
+	// bindEvent(div1, 'click', function (e){
+	// 	e.preventDefault()
+	// 	var target = e.target
+	// 	if(target.nodeName === 'A'){
+	// 		console.log('实现了一个代理')
+	// 	}
+	// })
+	</script>
+</body>
+</html>
