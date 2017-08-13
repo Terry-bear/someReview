@@ -19,6 +19,6 @@ public class TestAPI {
 		Set<String> sets = jedis.keys("*");
 		System.out.println(sets.size());
 		
-		//后续请参考脑图，家庭作业，敲一遍......
+		
 	}
 }
