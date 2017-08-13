@@ -4,6 +4,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Transaction;
 
 public class TestTX {
+	// 模拟取钱时redis事务的运行机制
 	public boolean transMethod() throws InterruptedException {
 	     Jedis jedis = new Jedis("127.0.0.1", 6379);
 	     int balance;// 可用余额
@@ -11,7 +12,7 @@ public class TestTX {
 	     int amtToSubtract = 10;// 实刷额度
 
 	     jedis.watch("balance");
-	     //jedis.set("balance","5");//此句不该出现，讲课方便。模拟其他程序已经修改了该条目
+	     // 模拟高并发下延迟处理
 	     Thread.sleep(7000);
 	     balance = Integer.parseInt(jedis.get("balance"));
 	     if (balance < amtToSubtract) {
@@ -41,6 +42,7 @@ public class TestTX {
 	   * 足够的话，就启动事务进行更新操作，
 	   * 如果在此期间键balance被其它人修改， 那在提交事务（执行exec）时就会报错， 
 	   * 程序中通常可以捕获这类错误再重新执行一次，直到成功。
+	   * PS：参考尚硅谷周阳
 	 * @throws InterruptedException 
 	   */
 	  public static void main(String[] args) throws InterruptedException {
