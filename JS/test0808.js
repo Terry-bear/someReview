@@ -1,10 +1,12 @@
-typeof undefined //undefined
-typeof 'abc' //string
-typeof 123 //number
-typeof true // boolean
-typeof {}//object
-typeof console.log//function
-typeof null//object-->特别注意
+//typeof打印出来的值是字符串
+console.log(typeof(typeof abc));//string
+typeof undefined //‘undefined’
+typeof 'abc' //‘string’
+typeof 123 //’number‘
+typeof true // ’boolean‘
+typeof {}//’object‘
+typeof console.log//'function'
+typeof null//’object‘’-->特别注意
 
 100 == '100' //true
 0 == '' //true
