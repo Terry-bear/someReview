@@ -5,7 +5,7 @@
 console.log(a)	//undefined
 var a = 100
 
-fn('terry')	//'terry' 20
+fn('terry')	//'terry' 23
 function fn(name){
 	age = 23
 	console.log(name, age)
