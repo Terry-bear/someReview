@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>instanceof深入</title>
+  </head>
+  <body>
+    <!--
+    1. A instanceof B  则A是实例，B是构造函数(对象)
+    2. 如果B的显式原型对象在A的隐式原型链上，则说明A instanceof B 为 true
+    3. instanceof的规则，前隐后显，前面的函数看隐式原型链，后面的函数看显式原型
+   -->
+   <script type="text/javascript">
+   console.log(Object.__proto__)
+   console.log(Object.prototype)
+
+   /*
+   测试题1
+    */
+   var A = function() {
+
+   }
+   A.prototype.n = 1
+
+   var b = new A()
+
+   A.prototype = {
+     n: 2,
+     m: 3
+   }
+
+   var c = new A()
+   console.log(b.n, b.m, c.n, c.m)
+
+
+   /*
+    测试题2
+    */
+   var F = function(){};
+   Object.prototype.a = function(){
+     console.log('a()')
+   };
+   Function.prototype.b = function(){
+     console.log('b()')
+   };
+   var f = new F();
+   f.a()
+   f.b()  //undefined
+   F.a()
+   F.b()
+
+   </script>
+  </body>
+</html>

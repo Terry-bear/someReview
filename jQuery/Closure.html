@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>闭包的理解</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // 闭包到底是什么？
+    /*
+      绝大多数人的理解是：  闭包是嵌套的内部函数
+      其实：   闭包是包含被引用变量(函数)的对象
+      则产生闭包的条件就有两个:
+      * 函数嵌套
+      * 内部函数引用了外部函数的数据(变量/函数)
+    */
+
+    function fn1 () {
+      var a = 2
+      function fn2() {
+        console.log(a);
+      }
+    }
+    fn1()
+    </script>
+  </body>
+</html>
