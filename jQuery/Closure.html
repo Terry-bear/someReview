@@ -22,6 +22,33 @@
       }
     }
     fn1()
+
+    //  闭包和变量提升的混合
+    function fn2 () {
+      var a = 2
+      function fn3 () {
+        a ++
+        console.log(a)
+      }
+      return fn3
+    }
+
+    var fn_clo = fn2()
+    fn_clo() //3
+    fn_clo() //4
+
+    // test
+    function fn3 () {
+      var a = 2
+      function fn4 () {
+        a++
+        console.log(a)
+      }
+      return fn4
+    }
+    var f_test = fn3()
+    f_test()
+    fn3()()
     </script>
   </body>
 </html>
