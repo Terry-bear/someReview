@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript">
+  // js
+  window.onload = function () {
+    var btn1 = document.getElementById('btn1')
+    btn1.onclick = function () {
+      var username = document.getElementById('username').value
+      alert(username)
+    }
+  }
+  </script>
+
+  <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+  // 绑定文档加载完成的监听
+  $(function () {
+    $('#btn2').click(function () {
+      var username = $('#username').val()
+      alert(username)
+    })
+  })
+
+  </script>
+</head>
+<body>
+
+  用户名： <input type="text" name="" id="username">
+  <button type="button"id="btn1">确认（原生版）</button>
+  <button type="button"id="btn2">确认（jQuery）</button>
+</body>
+</html>
