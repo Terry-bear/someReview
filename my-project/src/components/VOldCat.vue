@@ -1,7 +1,6 @@
 <template>
      <div>
-       <p>this's a cat </p> <br>
-       <router-view></router-view>
+       <p>this cat is {{mas}} years old</p>
      </div>
 </template>
 
@@ -9,7 +8,7 @@
 export default {
   data() {
     return {
-      name: 'cat'
+      mas: 2
     }
   }
 }

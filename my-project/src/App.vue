@@ -13,6 +13,11 @@
     <br>
     <animation></animation>
     
+    <router-view></router-view>
+    <!-- <router-link :to="{path:'do/35g'>to dog</router-link> <br> -->
+    <router-link :to="{path:'dog',param:{age:35}}">to dog</router-link> <br>
+    <router-link :to="{path:'../cat'}">to cat</router-link> <br>
+    <router-link :to="{path:'../cat'}">to old cat</router-link> <br>
   </div>
 </template>
 
