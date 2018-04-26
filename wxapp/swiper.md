@@ -22,3 +22,4 @@
 ### 小程序事件
 	1. 见小程序页面渲染顺序的第四和第五项
 	2. 小程序跳转属性可以加入function,分别是success,fail,complete,分别代表跳转的三种状态
+	3. bindtap和catchtap的区别,bindtap执行的事件是冒泡事件,子元素执行则父元素执行,catchtap可以阻止冒泡
