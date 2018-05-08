@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>02_JSX</title>
+</head>
+<body>
+<div id="example1"></div>
+<div id="example2"></div>
+
+<script src="../js/react.js"></script>
+<script src="../js/react-dom.js"></script>
+<script src="../js/babel.min.js"></script>
+
+<script type="text/babel">
+
+  // 初始化动态数据
+  var title = 'I Love you!';
+  var myName = 'xfzhang';
+
+  //创建虚拟dom : JSX
+  var vDOM = <h1 id="myTitle" name={myName}>{title}</h1>;
+  //将虚拟dom渲染中页面元素中
+  ReactDOM.render(vDOM, document.getElementById('example1'));
+</script>
+
+<script type="text/javascript">
+  var title = 'You Love me!';
+  var myName = 'zhiyong';
+  //创建虚拟dom : 纯JS(一般不用)
+  var vDOM2 = React.createElement('h1', {id: 'myTitle2', name: myName.toUpperCase()}, title.toUpperCase());
+  //将虚拟dom渲染中页面元素中
+  ReactDOM.render(vDOM2, document.getElementById('example2'));
+</script>
+
+</body>
+</html>
