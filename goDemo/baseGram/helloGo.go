@@ -3,6 +3,12 @@ package main
 import "fmt"
 
 // 定义变量
+var (
+	aa = "haha"
+	bb = 12
+	cc = true
+)
+// 定义变量
 func variableZeroVarlue() {
 	var a int
 	var s string
