@@ -11,7 +11,8 @@
   "description": "koa2 nodejs",
   "dependencies": {
     "koa": "^2.5.1",
-    "koa-logger": "^3.2.0"
+    "koa-logger": "^3.2.0",
+    "koa-session": "^5.8.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

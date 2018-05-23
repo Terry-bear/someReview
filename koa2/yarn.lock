@@ -841,9 +841,13 @@ core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.6"
   resolved "http://registry.npm.taobao.org/core-js/download/core-js-2.5.6.tgz#0fe6d45bf3cac3ac364a9d72de7576f4eb221b9d"
 
-core-util-is@~1.0.0:
+core-util-is@^1.0.2, core-util-is@~1.0.0:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/core-util-is/download/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
+
+crc@^3.4.4:
+  version "3.5.0"
+  resolved "http://registry.npm.taobao.org/crc/download/crc-3.5.0.tgz#98b8ba7d489665ba3979f59b21381374101a1964"
 
 create-error-class@^3.0.0:
   version "3.0.2"
@@ -1337,6 +1341,10 @@ is-ci@^1.0.10:
   dependencies:
     ci-info "^1.0.0"
 
+is-class@~0.0.4:
+  version "0.0.4"
+  resolved "http://registry.npm.taobao.org/is-class/download/is-class-0.0.4.tgz#e057451705bb34e39e3e33598c93a9837296b736"
+
 is-data-descriptor@^0.1.4:
   version "0.1.4"
   resolved "http://registry.npm.taobao.org/is-data-descriptor/download/is-data-descriptor-0.1.4.tgz#0b5ee648388e2c860282e793f1856fec3f301b56"
@@ -1500,6 +1508,14 @@ is-stream@^1.0.0, is-stream@^1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/is-stream/download/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
 
+is-type-of@^1.0.0:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/is-type-of/download/is-type-of-1.2.0.tgz#b553cbb4621adf5b4171e8883f370e7a6ec38995"
+  dependencies:
+    core-util-is "^1.0.2"
+    is-class "~0.0.4"
+    isstream "~0.1.2"
+
 is-windows@^1.0.2:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/is-windows/download/is-windows-1.0.2.tgz#d1850eb9791ecd18e6182ce12a30f396634bb19d"
@@ -1521,6 +1537,10 @@ isobject@^2.0.0:
 isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "http://registry.npm.taobao.org/isobject/download/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
+
+isstream@~0.1.2:
+  version "0.1.2"
+  resolved "http://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
 
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
@@ -1591,6 +1611,16 @@ koa-logger@^3.2.0:
     chalk "^1.1.3"
     humanize-number "0.0.2"
     passthrough-counter "^1.0.0"
+
+koa-session@^5.8.1:
+  version "5.8.1"
+  resolved "http://registry.npm.taobao.org/koa-session/download/koa-session-5.8.1.tgz#f57b558a20e4da713cc2f96bfa67946bb4110548"
+  dependencies:
+    crc "^3.4.4"
+    debug "^2.2.0"
+    is-type-of "^1.0.0"
+    pedding "^1.1.0"
+    uid-safe "^2.1.3"
 
 koa@^2.5.1:
   version "2.5.1"
@@ -2008,6 +2038,10 @@ pause-stream@0.0.11:
   dependencies:
     through "~2.3"
 
+pedding@^1.1.0:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/pedding/download/pedding-1.1.0.tgz#f7b138c288d4bd584eada1215f5bd924f1e1e667"
+
 pify@^3.0.0:
   version "3.0.0"
   resolved "http://registry.npm.taobao.org/pify/download/pify-3.0.0.tgz#e5a4acd2c101fdf3d9a4d07f0dbc4db49dd28176"
@@ -2047,6 +2081,10 @@ pstree.remy@^1.1.0:
   resolved "http://registry.npm.taobao.org/pstree.remy/download/pstree.remy-1.1.0.tgz#f2af27265bd3e5b32bbfcc10e80bac55ba78688b"
   dependencies:
     ps-tree "^1.1.0"
+
+random-bytes@~1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/random-bytes/download/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
 
 randomatic@^3.0.0:
   version "3.0.0"
@@ -2457,6 +2495,12 @@ type-is@^1.5.5:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.18"
+
+uid-safe@^2.1.3:
+  version "2.1.5"
+  resolved "http://registry.npm.taobao.org/uid-safe/download/uid-safe-2.1.5.tgz#2b3d5c7240e8fc2e58f8aa269e5ee49c0857bd3a"
+  dependencies:
+    random-bytes "~1.0.0"
 
 undefsafe@^2.0.2:
   version "2.0.2"
